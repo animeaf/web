@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//yadi.sk/favicon.ico" type="image/x-icon">
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="googlebot" content="noindex">
+    <meta name="referrer" content="no-referrer">
+    <title>YaDisk</title>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//ssl.p.jwpcdn.com/player/v/7.12.12/jwplayer.js"></script>
+    <style>body{margin:0;background-color:black;}</style>
+</head>
+<body>
+    <div id="player"></div>
+    <script>function get(e,i){i||(i=window.location.href),e=e.replace(/[\[\]]/g,"\\$&");var n=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)").exec(i);return n?n[2]?decodeURIComponent(n[2].replace(/\+/g," ")):"":null}var v=get("v");$.get("//cloud-api.yandex.net/v1/disk/public/resources/download",{public_key:"https://yadi.sk/i/"+v},function(e){jwplayer.key="XsWyeNQ1jdztTqhiD5MXEpz37wrnHdV05j7Ocg==",jwplayer("player").setup({preload:"auto",file:e.href,type:"video/mp4",width:$(window).width(),height:$(window).height()}),$(document).ready(function(){$(window).resize(function(){jwplayer().resize($(window).width(),$(window).height())})})},"json");</script>
+</body>
+</html>
